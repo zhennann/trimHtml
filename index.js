@@ -16,6 +16,8 @@ function trimHtml(html, options) {
         moreText = options.moreText || '»',
         preserveWhiteSpace = options.preserveWhiteSpace || false;
 
+    html = html.replace(/<script[\s\S]*?<\/script>/gi, '');
+
     var arr = html.replace(/</g, "\n<")
         .replace(/>/g, ">\n")
         .replace(/\n\n/g, "\n")

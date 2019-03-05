@@ -5,6 +5,7 @@
  * @return {Object}
  */
 function trimHtml(html, options) {
+    if(!html) return '';
 
     options = options || {};
 

@@ -5,7 +5,10 @@
  * @return {Object}
  */
 function trimHtml(html, options) {
-    if(!html) return '';
+    if(!html) return {
+        html: '',
+        more: false
+    };
 
     options = options || {};
 
